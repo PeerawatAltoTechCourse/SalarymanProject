@@ -1,0 +1,58 @@
+#overloading
+class Employee: 
+    minSalary = 12000
+    maxSalary = 50000
+    def __init__(self,engname,engsalary,engdepartment): 
+        self.name = engname
+        self.salary = engsalary
+        self.department = engdepartment 
+        
+    def show(self):
+        print("the engineer name :  {}".format(self.name))
+        print("and his salary is {}".format(self.salary)) 
+        print("depertment {}".format(self.department))
+
+
+class Accounting(Employee):
+    departmentname="Accounting"
+    def __init__(self,name,salary,age):
+        super().__init__(name,salary,self.departmentname)
+        self.age=age
+    def show(self):
+        super().show()
+        print("age : {}".format(self.age))
+
+
+class Lawer(Employee):
+    departmentname="Lawyer"
+    def __init__(self,name,salary,experience,seminar):
+        super().__init__(name,salary,self.departmentname)
+        self.experience=experience
+        self.seminar=seminar
+    def show(self):
+        super().show()
+        print("experience : {}".format(self.experience))
+        print("seminar : {}".format(self.seminar))
+    
+
+class Programmer(Employee):
+    departmentname="Programmer"
+    def __init__(self,name,salary,skill):
+        super().__init__(name,salary,self.departmentname)
+        self.skill=skill
+    def show(self):
+        super().show()
+        print("skill : {}".format(self.skill))
+    
+       
+
+acc1=Accounting("Richa",20000,32)
+acc1.show()
+print("###############")
+law1=Lawer("Bellingham",40000,"won the police-grabbike case","talk about being the law wisely")
+law1.show()
+print("###############")
+prog1=Programmer("Neves",50000,"data management")
+prog1.show()
+print("###############")
+
