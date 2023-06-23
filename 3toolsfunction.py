@@ -13,9 +13,9 @@ class Employee:
     
 
 emp1 = Employee("Peerawat",30000,"Power")
-emp1.salary = 35000
-emp1.show()
 emp2 = Employee("Messi",500000,"Data management")
-emp2.show()
 
-#you can change attributes by going direct to that object follow with the qttribute you want to change
+print(emp1.__class__)
+
+# class
+# check the class of the object  

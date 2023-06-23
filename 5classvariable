@@ -1,0 +1,27 @@
+#Class variable
+class Employee: 
+    _minSalary = 12000
+    _maxSalary = 50000
+    def __init__(self,engname,engsalary,engmajor): 
+        #instanc variable
+        self._name = engname
+        self._salary = engsalary
+        self._major = engmajor 
+    
+    #protected method
+    def _show(self):
+        print("the engineer name :  {}".format(self._name))
+        print("and his salary is {}".format(self._salary)) 
+        print("graduated {}".format(self._major))
+
+    
+
+emp1 = Employee("Peerawat",30000,"Power")
+emp2 = Employee("Messi",500000,"Data management")
+
+print(Employee._maxSalary)
+
+# instance varible is a variable used when there's a object created
+# class variable , there's no need to create an object to use the method (3rd & 4th line) 
+# So you can write the class and get to the variable like line 22nd
+
